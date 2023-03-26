@@ -28,3 +28,11 @@ python raider src/raider.py run --no-debug-mode scripts/script_operations
 ```bash
 python raider src/raider.py execute --no-debug-mode scripts/script_operations
 ```
+
+Repo structure:
+`scripts/` - consists of raider language scripts
+`scripts/bytecode` - bytecode of the scripts with the same name and .rd extension
+`src/compiler` - compiler code
+`src/vm` - vm code
+
+
