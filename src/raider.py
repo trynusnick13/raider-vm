@@ -7,7 +7,7 @@ app = typer.Typer()
 
 
 @app.command()
-def compile_to_raider_bytecode(file_name: str, debug_mode: bool = False) -> str:
+def compile(file_name: str, debug_mode: bool = False) -> str:
     """
     Compiles <file_name>.rd file and generates  <file_name>.raided file with bytecode
 
@@ -19,7 +19,7 @@ def compile_to_raider_bytecode(file_name: str, debug_mode: bool = False) -> str:
     return generated_file_name
 
 @app.command()
-def run_raider_bytecode(file_name: str, debug_mode: bool = False):
+def execute(file_name: str, debug_mode: bool = False):
     """
     Runs <file_name>.raided file with bytecode
 
@@ -28,9 +28,9 @@ def run_raider_bytecode(file_name: str, debug_mode: bool = False):
     vm.run_bytecode(file_name, debug_mode)
 
 @app.command()
-def compile_and_run(file_name: str, is_debug_mode: bool = False):
-    compiler.compile(file_name, is_debug_mode)
-    vm.run_bytecode(file_name, is_debug_mode)
+def run(file_name: str, debug_mode: bool = False):
+    compiler.compile(file_name, debug_mode)
+    vm.run_bytecode(file_name, debug_mode)
 
 
 if __name__ == "__main__":

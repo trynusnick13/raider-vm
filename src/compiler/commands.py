@@ -3,7 +3,7 @@ from enum import IntEnum
 import yaml
 import os
 
-with open("compiler/commands_config.yml", "r") as data_stream:
+with open("src/compiler/commands_config.yml", "r") as data_stream:
     CONFIG = yaml.safe_load(data_stream)
 
 COMMANDS = CONFIG["bytecode_commands"]
