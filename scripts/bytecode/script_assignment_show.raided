@@ -1,0 +1,12 @@
+script_assignment_show: 
+	iconst 1
+	istore 0
+	iconst 2
+	istore 1
+	iconst 3
+	istore 2
+	iconst 55
+	istore 3
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---

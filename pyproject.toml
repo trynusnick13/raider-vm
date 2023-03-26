@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "raider-vm"
+version = "0.1.0"
+description = """
+This package consists of raider toolkit inspired by Las Vegas Raiders NFL Team.
+Using this package you can compile & execute the raiders scripts(programming language that exists in main author's head)
+"""
+authors = ["Nikita Trynus <trynuspoc@gmail.com>"]
+readme = "README.md"
+packages = [{include = "raider_vm"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.7.0"}
+pyyaml = "^6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pylint = "^2.17.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

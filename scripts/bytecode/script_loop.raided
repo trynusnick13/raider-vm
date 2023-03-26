@@ -1,0 +1,27 @@
+script1: 
+	iconst 1
+	istore 0
+	iconst 5
+	istore 1
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---
+	--- Loop Starting ---
+	iload 0
+	iload 1
+	lt_cmp
+	fw_jump 10
+	--- Addition Starting ---
+		iload 0
+		iconst 1
+		iadd 2
+	--- Addition Finished ---
+	istore 0
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---
+	bck_jump 13
+	--- Loop Finished ---
+	--- Printing Starting ---
+	print 1
+	--- Printing Finished ---

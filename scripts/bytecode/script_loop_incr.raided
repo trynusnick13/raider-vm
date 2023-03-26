@@ -1,0 +1,22 @@
+script_loop_incr: 
+	iconst 1
+	istore 0
+	iconst 5
+	istore 1
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---
+	--- Loop Starting ---
+	iload 0
+	iload 1
+	lt_cmp
+	fw_jump 5
+	increment 0
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---
+	bck_jump 8
+	--- Loop Finished ---
+	--- Printing Starting ---
+	print 1
+	--- Printing Finished ---

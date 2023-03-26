@@ -1,0 +1,17 @@
+script_if.rd: 
+	iconst 1
+	istore 0
+	iconst 5
+	istore 1
+	--- Condition Starting ---
+	iload 0
+	iload 1
+	lt_cmp
+	fw_jump 3
+	--- Printing Starting ---
+	print 0
+	--- Printing Finished ---
+	--- Condition Finished ---
+	--- Printing Starting ---
+	print 1
+	--- Printing Finished ---

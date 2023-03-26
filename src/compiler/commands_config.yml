@@ -1,0 +1,49 @@
+bytecode_commands:
+  LOAD_VALUE_TO_STACK:
+    name: iconst
+    param: constant to put 
+    type: int
+    description: loads constant to stack.
+  INC_VALUE:
+    name: increment
+    param: index of variable from local variables array
+    type: int
+    description: increments variable(no constants).
+  LOAD_VALUE_TO_LOCAL_VARIABLE_ARRAY:
+    name: istore
+    param: index of variable from local variables array
+    type: int
+    description: takes value from top of the stack(pop) & put it to local variables array with index
+  LOAD_VALUE_FROM_LOCAL_VARIABLE_ARRAY: 
+    name: iload
+    param: index of variable from local variables array
+    type: int
+    description: puts the value(get) from variables array onto stack
+  PRINT_VALUE: 
+    name: print
+    param: index of variable from local variables array
+    type: int
+    description: prints local variable value
+  ADD_VALUES: 
+    name: iadd
+    param: number of values from stack to pop & add
+    type: int
+    description: adds <param> first elements from stack
+  MULT_VALUES: 
+    name: imult
+    param: number of values from stack to pop & multiply
+    type: int
+    description: 
+  LESS_THAN: 
+    name: lt_cmp
+    description: compares first two values from stack
+  FORWARD_JUMP: 
+    name: fw_jump
+    param: index of variable from local variables array
+    type: int
+    description: skips <param> ops
+  BACK_JUMP: 
+    name: bck_jump
+    param: index of variable from local variables array
+    type: int
+    description: returns back on <param> ops
